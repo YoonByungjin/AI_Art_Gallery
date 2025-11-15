@@ -1,0 +1,95 @@
+/*  기본 페이지 세팅    */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Daeojamjil";
+  background-color: #040404;
+  color: #ffffff;
+  height: 2500px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*  헤더라인    */
+.headerline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 40px;
+
+  /* 화면 상단에 헤더 고정 */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* 헤더의 3개 섹션 (왼쪽, 가운데, 오른쪽) */
+.header_left,
+.header_center,
+.header_right {
+  flex: 1;
+}
+
+/* --- 왼쪽: '생성 과정' 버튼 --- */
+.header_left {
+  text-align: left;
+}
+
+#left_headerline {
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* --- 가운데: '생성 과정' 타이틀 --- */
+.header_center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#center_headerline {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.underline {
+  margin-top: 8px;
+}
+
+/* 밑줄 이미지 크기 제어 */
+.underline img {
+  width: 100%;
+  height: 3px;
+  object-fit: cover;
+}
+
+/* --- 오른쪽: 화살표 버튼 --- */
+.header_right {
+  text-align: right;
+}
+
+/* 화살표 이미지 크기 제어 */
+#arrow {
+  width: 60px;
+  height: auto;
+}
+
+/*  웹 폰트    */
+@font-face {
+  font-family: "Daeojamjil";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil2Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
