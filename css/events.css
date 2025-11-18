@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "The_Jamsil", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    ;
+    color: #fff;
+}
+
+/* 1. 전체 화면 컨테이너 (.container) */
+.container {
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    /* ➡️ 추가: 두 영역(left-event-area와 right-text-area) 사이의 간격을 40px로 좁힙니다. */
+    gap: 0px;
+    align-items: center;
+    /* ➡️ 수정: 전체 패딩을 고정 값으로 변경 (좌우 배치 시 % 패딩은 복잡해질 수 있음) */
+    padding: 40px;
+    position: relative;
+}
+
+/* 2. 콘텐츠 래퍼 (.content-wrapper) - 좌우 영역을 감싸는 Flex 컨테이너 */
+.content-wrapper {
+    /* ➡️ 수정: 내부 좌우 영역을 가로 배치 */
+    display: flex;
+    justify-content: space-center;
+    /* 좌우 영역 사이에 공간을 띄움 */
+    align-items: center;
+    gap: 0px;
+    /* ➡️ 수정: 전체 콘텐츠 영역의 최대 너비를 확장하여 좌우 콘텐츠를 수용 */
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* ⬅️ 새로 추가: 왼쪽 이벤트 이미지 영역 (.left-event-area) */
+.left-event-area {
+    /* 좌우 영역 너비 비율 조정 (50% / 50% 분할) */
+    width: 60%;
+    max-width: 800px;
+    /* padding-right: 50px; */
+    /* 오른쪽 텍스트와의 간격 확보 */
+    text-align: center;
+    /* 이미지를 중앙에 배치 */
+}
+
+.event-image {
+    width: 100%;
+    /* 부모 div 너비에 맞춤 */
+    max-height: 80vh;
+    /* 이미지 높이가 너무 커지는 것을 방지 */
+    object-fit: contain;
+    /* 이미지 비율 유지 */
+}
+
+/* ➡️ 새로 추가: 오른쪽 텍스트 영역 (.right-text-area) */
+.right-text-area {
+    width: 40%;
+    max-width: 600px;
+    /* 텍스트 영역의 중앙 정렬을 유지 */
+    text-align: center;
+}
+
+
+/* 3. 제목 그룹 (.title-group) */
+.title-group {
+    margin-bottom: 3rem;
+}
+
+.main-title {
+    font-family: "The_Jamsil",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.event-type {
+    font-family: "The_Jamsil",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+/* 4. 설명 및 인용구 (.event-description) */
+.event-description {
+    font-family: "The_Jamsil",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 1.6;
+    max-width: 500px;
+    /* 블록 중앙 정렬 유지 */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+}
+
+/* 5. 소셜 미디어 링크 그룹 (.social-links) */
+.social-links {
+    margin-top: 30px;
+    /* ➡️ 수정: Flexbox를 사용하여 내부 아이콘들을 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-icon {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+/* 우측 상단 화살표 (.next-btn) */
+.next-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    text-decoration: none;
+    cursor: pointer;
+}

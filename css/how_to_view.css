@@ -1,0 +1,107 @@
+/* 기본 설정 및 @font-face 정의 */
+@font-face {
+    font-family: 'BookkMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Lt.woff2') format('woff2');
+    font-weight: 400;
+    /* 이 폰트가 지원하는 굵기 (Light) */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Daeojamjil';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil1Thin.woff2') format('woff2');
+    font-weight: 100;
+    /* 이 폰트가 지원하는 굵기 (Thin) */
+    font-display: swap;
+}
+
+/* 폰트 적용 (BookkMyungjo를 기본으로 적용) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 1. 기본 폰트 설정: 모든 요소에 'Daeojamjil'을 적용하고, 제목에서 덮어쓸 것임 */
+    font-family: "The_Jamsil",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    color: #fff;
+}
+
+/* 1. 🟦 전체 화면 컨테이너 (.container) */
+.container {
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+/* 🟥 우측 상단 화살표 (.next-btn) - 임시 패딩 및 폰트 크기 제거 */
+.next-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    /* font-size, padding 등은 이미지 크기에 맞춰 .arrow-icon에 적용하는 것이 좋습니다. */
+}
+
+/* 2. 🟨 콘텐츠 래퍼 (.content-wrapper) - 임시 배경색 및 패딩 제거 */
+.content-wrapper {
+    text-align: center;
+    max-width: 800px;
+}
+
+/* 3. 💚 메인 제목 (h1) 및 타이틀 (.title) - BookkMyungjo 폰트 적용 */
+.main-title,
+.title {
+    /* 2. 제목에 'BookkMyungjo' 폰트 적용 */
+    font-family: "The_Jamsil",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    /* BookkMyungjo의 @font-face에 정의된 굵기(400)를 사용 */
+    font-weight: 400;
+}
+
+/* 4. 🧡 핵심 규칙 (.key-rule) - Daeojamjil 폰트 적용 (기본 상속되지만 명시) */
+.key-rule,
+.rule {
+    font-family: "The_Jamsil",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-size: 2.2rem;
+    /* Daeojamjil의 @font-face에 정의된 굵기(100)를 사용 */
+    font-weight: 100;
+    margin-bottom: 3rem;
+    /* 임시 배경색 및 패딩 제거 */
+}
+
+/* 5. 💜 세부 설명 그룹 (.description-group) - Daeojamjil 폰트 적용 (기본 상속되지만 명시) */
+.description-group,
+.description {
+    font-family: "The_Jamsil",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-size: 1.2rem;
+    /* Daeojamjil의 @font-face에 정의된 굵기(100)를 사용 */
+    font-weight: 100;
+    line-height: 1.6;
+    opacity: 0.85;
+    /* 임시 배경색 및 패딩 제거 */
+}
