@@ -1,0 +1,139 @@
+/* 영어 폰트 - 부크크 명조 */
+@font-face {
+    font-family: 'BookkMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Lt.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'BookkMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* 영어 텍스트 자동 적용 */
+:lang(en),
+.logoText,
+.tag {
+    font-family: 'BookkMyungjo', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #1e1b2f 0, #050509 55%, #020205 100%);
+    color: #f5f5f5;
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.pageWrap {
+    width: 100%;
+    max-width: 1100px;
+}
+/* 상단 네비 */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.logoText {
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+.homeBtn {
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.2);
+    color: #f5f5f5;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.homeBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+/* 헤더 */
+.header {
+    margin-bottom: 2.8rem;
+}
+.sectionLabel {
+    font-size: 0.9rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 0.9rem;
+}
+.titleMain {
+    font-size: clamp(2.2rem, 3vw, 2.7rem);
+    margin-bottom: 0.6rem;
+}
+.titleSub {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+.underline {
+    margin-top: 1.4rem;
+    width: 80px;
+    height: 2px;
+    background: #ffffff;
+}
+/* 팀 카드 */
+.teamGrid {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1.3rem;
+}
+.memberCard {
+    background: rgba(10, 10, 20, 0.92);
+    border-radius: 1.1rem;
+    padding: 1.4rem 1.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+.memberCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(18, 18, 30, 0.98);
+}
+.memberMain {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+.memberName {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.memberRole {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+.memberDetail {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+/* 오른쪽 태그 */
+.tag {
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-size: 0.76rem;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+}

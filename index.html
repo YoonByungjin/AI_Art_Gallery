@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>홈화면</title>
+        <link rel="stylesheet" href="css/indexStyle.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홈화면</title>
-</head>
+    <body>
+        <section class="content">
+            <h1 class="title">
+                Digital<br />
+                Art Gallery
+            </h1>
+            <button class="btn" onclick="visitGallery()">Visit Gallery</button>
+        </section>
 
-<body>
-
-</body>
-
+        <script>
+            // 아직 이동할 페이지가 없으니 임시 동작
+            function visitGallery() {
+                alert('갤러리 페이지로 이동합니다. (추후 링크 연결 예정)');
+            }
+        </script>
+    </body>
 </html>
