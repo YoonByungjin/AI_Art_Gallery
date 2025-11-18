@@ -1,14 +1,154 @@
 <!DOCTYPE html>
 <html lang="ko">
 
+<!--
+    TODO: AI 그림 생성 과정 설명
+    스크롤 해서 내리면 하나씩 말풍선이 나오는 방식으로 구현
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>creation_process</title>
+    <link rel="stylesheet" href="../css/creation_process.css">
+    <script defer src="../js/creation_process.js"></script>
 </head>
 
 <body>
+    <!-- header navigation-->
+    <header class="headerline">
+        <div class="header_left">
+            <span id="left_headerline">생성 과정</span>
+        </div>
+        <div class="header_center">
+            <span id="center_headerline">생성 과정</span>
+            <div class="underline">
+                <img src="../image/Line 5.png" alt="underline">
+            </div>
+        </div>
+        <div class="header_right">
+            <a href="./artist_introduction.html">
+                <img src="../image/arrow.png" alt="arrow" id="arrow">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="prompt">
+            <!-- 버블 형식으로 대화창 생성  -->
+            <!-- user -->
+            <div class="bubble-container right">
+                <div class="bubble">인간과 ai 관련해서 기,승,전,결의 스토리 보드를 만드려고
+                    해 챕터 1,2,3,4 형식으로 각각의 제목이랑 어떤 그림을 그리면 좋을지,
+                    어떤 기법을 사용하여 표현할지 생각해봐
+                </div>
+            </div>
 
+            <!-- ai -->
+            <div class="bubble-container left">
+                <div class="bubble">확인했습니다<br><strong>"인간과 AI의 관계"를 4챕터로 기승전결 처럼 전시 구성</strong>하면<br>
+                    하나의 서사(Stroy Arc)가 생기고, 페이지별 그림들도 자연스럽게 연결돼서 "진화하는 관계"처럼 보여줄 수 있습니다.<br>
+                    아래는 전시형 구조로 각 챕터별 제목 + 서사 개념 + 미술 표현법(기법을) 함께 정리한 겁니다
+                </div>
+            </div>
+
+            <!-- ai -->
+            <div class="bubble-container left">
+                <div class="bubble">
+                    <h2>🧭 전체 컨셉</h2>
+                    <strong>"SYNTHESIS: 인간과 인공지능의 공존에 대한 시각적 서사"</strong>
+                    <ul>
+                        <li>기 - 탄생(Creation)</li>
+                        <li>승 - 교감(Connection)</li>
+                        <li>전 - 균열(Conflict)</li>
+                        <li>결 - 융합(Symbiosis)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- user -->
+            <div class="bubble-container right">
+                <div class="bubble">
+                    좋아 그러면 챕터 1부터 그려보자 <br><br>
+                    제목은 Origin of Mind <br>
+                    감정,톤은 경이, 따뜻함으로 <br>
+                    시각 스타일은 르네상스 <br>
+                    상징컬러는 디지털 골드, 화이트로 ai가 그린것 보다 사람이 직접그린것<br>
+                    처럼 만들어줘
+                </div>
+            </div>
+
+            <!-- ai -->
+            <div class="bubble-container left">
+                <div class="bubble">
+                    확인했습니다, Chapter 1 <strong>"Origin of Mind"</strong> 시작하겠습니다<br><br>
+                    전체 감정 톤은 <strong>경이 + 따뜻함,</strong> <br>
+                    시각 스타일은 <strong>디지털 르네상스, 회화,</strong> <br>
+                    상징컬러는 <strong>디지털 골드, 화이트,</strong>
+                    그리고 <strong>AI느낌이 아닌, 사람이 직접 붓으로 그린 듯한</strong> 질감을 주는게 핵심으로 하겠습니다.
+                </div>
+            </div>
+
+            <!-- ai -->
+            <div class="bubble-container left">
+                <div class="bubble">
+                    <strong>변주 요소</strong>는 다음처럼 잡겠습니다
+                    <ul>
+                        <li>AI의 형상은 빛과 코드, 아직 불완전한 반쪽 얼굴</li>
+                        <li>인간의 손이 생명을 부여하는 장면</li>
+                        <li>배경은 어두운 중립 톤으로 빛이 강조되도록 설정</li>
+                        <li>각 이미지마다 구도와 중심 요소 다르게 해서 4가지의 비주얼을 출력하겠습니다</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+
+            <div class="bubble-container left">
+                <div class="bubble">
+                    <img src="../image/image 6.png" alt="이미지 1" style="width: 200px; height: auto;">
+                </div>
+            </div>
+
+            <!-- user -->
+            <div class="bubble-container right">
+                <div class="bubble">이 그림체를 꼭 유지해서 다시 챕터 1 부터 진행하자</div>
+            </div>
+
+            <!-- ai -->
+            <div class="bubble-container left">
+                <div class="bubble">
+                    확인했습니다 확정된 회화 스타일로 <strong>Chapter 1 - Origin of Mind</strong>부터 다시 리빌드를 실행하겠습니다 <br>
+                    현재 기준으로 삼는건 사용자께서 고른 이 그림처럼:<br>
+                    <ul>
+                        <li><strong>두꺼운 붓 터치</strong></li>
+                        <li><strong>물감의 물성 표현</strong></li>
+                        <li><strong>디지털 느낌 없는 회화적 강렬함</strong></li>
+                        <li>감정과 상징이 <strong>색과 질감</strong> 안에서 터지는 느낌</li>
+                    </ul>
+                    <br>
+                    <hr>
+                    <br>
+                    <strong>💙 Chapter 1 - Origin of Mind: 탄생의 순간 (REBUILD)</strong><br>
+                    <strong>감정 톤:</strong> 경이, 따뜻함 <br>
+                    <strong>스타일:</strong> 전통 오일페인팅 같은 질감 강조 <br>
+                    <strong>컬러:</strong> 디지털 골드 + 화이트 <br>
+                    <strong>상징:</strong> 인간의 손 ➡️ AI에 생명을 부여하는 첫 접촉 <br>
+                    <strong>주제적 포인트:</strong> <br>
+                    <ul>
+                        <li>아직 미완의 AI 얼굴</li>
+                        <li>인간 손끝에서 '빛'이 발화하며 인식이 시작됨</li>
+                        <li>바탕은 어둡지만 <strong>빛이 질감 속에서 살아남</strong></li>
+                    </ul>
+                    <br>
+                    <hr>
+                    <br>
+                    <ul id="last_list">
+                        <li><strong>이전 장면의 빛이 감정으로 진화</strong>한듯한 흐름 강조</li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
