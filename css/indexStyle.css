@@ -1,0 +1,58 @@
+/* 부크크 명조 폰트 적용 */
+@font-face {
+    font-family: 'BookkMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Lt.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'BookkMyungjo', serif;
+}
+body {
+    height: 100vh;
+    background: url('../image/image4.png') center center / cover no-repeat;
+    color: #fff;
+    overflow: hidden;
+}
+.content {
+    position: absolute;
+    right: 10vw;
+    top: 42%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 2;
+}
+.title {
+    font-size: 100px;
+    line-height: 1.1;
+    margin-bottom: 5rem;
+    font-weight: 700;
+}
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 1rem 3rem;
+    border-radius: 999px;
+    border: none;
+    background: #fff;
+    color: #111;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 400;
+}
+.btn:hover {
+    background: #ddd;
+    transform: translateY(-2px);
+}
