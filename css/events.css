@@ -127,6 +127,10 @@
     width: 80px;
     height: 80px;
     margin-left: 20px;
+    object-fit: contain;
+    /* ⬅️ 아이콘 크기 균일하게 */
+    display: block;
+    /* 간혹 baseline 정렬 깨짐 방지 */
 }
 
 /* 우측 상단 화살표 (.next-btn) */
