@@ -3,12 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>artist_introduction</title>
+    <title>AI 화가 소개</title>
+    <link rel="stylesheet" href="../css/artist_introduction.css">
 </head>
 
 <body>
 
+    <main class="page">
+        <section class="art-card">
+            <!-- 👈 왼쪽 그림 -->
+            <div class="art-image">
+                <!-- 파일 이름은 너가 쓰는 걸로 바꿔 -->
+                <img src="../image/밥피티.png" alt="AI Painter">
+            </div>
+
+            <!-- 👉 오른쪽 텍스트 (타이핑 영역) -->
+            <div class="art-text">
+                <h1 id="title"></h1>
+                <p id="typewriter"></p>
+            </div>
+        </section>
+    </main>
+
+    <img src="../image/화살표.png" id="nextBtn" class="next-Btn" alt="btn" style="display:none;">
+    <script src="../js/artist_introduction.js"></script>
 </body>
 
 </html>
