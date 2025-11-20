@@ -24,14 +24,23 @@
     position: relative;
 }
 
-/* 🟥 우측 상단 화살표 (.next-btn) - 임시 패딩 및 폰트 크기 제거 */
+/* 우측 상단 화살표 (.next-btn) */
 .next-btn {
-    position: absolute;
-    top: 40px;
+    position: fixed;
     right: 40px;
-    text-decoration: none;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 110px;
+    height: auto;
+    z-index: 9999;
     cursor: pointer;
-    /* font-size, padding 등은 이미지 크기에 맞춰 .arrow-icon에 적용하는 것이 좋습니다. */
+}
+
+.next-btn .arrow-icon {
+    width: 100%;
+    /* 🔥 버튼 크기 안으로 이미지를 강제 */
+    height: auto;
+    display: block;
 }
 
 /* 2. 🟨 콘텐츠 래퍼 (.content-wrapper) - 임시 배경색 및 패딩 제거 */
