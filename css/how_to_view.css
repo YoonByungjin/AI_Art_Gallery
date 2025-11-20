@@ -1,20 +1,3 @@
-/* 기본 설정 및 @font-face 정의 */
-@font-face {
-    font-family: 'BookkMyungjo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Lt.woff2') format('woff2');
-    font-weight: 400;
-    /* 이 폰트가 지원하는 굵기 (Light) */
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Daeojamjil';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil1Thin.woff2') format('woff2');
-    font-weight: 100;
-    /* 이 폰트가 지원하는 굵기 (Thin) */
-    font-display: swap;
-}
-
 /* 폰트 적용 (BookkMyungjo를 기본으로 적용) */
 * {
     margin: 0;
