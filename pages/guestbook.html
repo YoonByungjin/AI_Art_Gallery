@@ -127,10 +127,18 @@
 
     <!-- ▼ 다음 페이지로 이동하는 화살표 버튼 -->
     <div style="text-align:center;">
-        <a href="next.html">
-            <img src="arrow.png" class="arrow-btn" alt="다음 페이지로 이동">
+        <a href="../pages/events.html">
+            <img src="../image/arrow.png" class="arrow-btn" alt="다음 페이지로 이동">
         </a>
     </div>
+
+    <script>
+        window.onload = function () {
+            document.querySelector(".btn").addEventListener("click", () => {
+                alert("아직 안됐지롱~낄낄낄");
+            });
+        }
+    </script>
 
 </body>
 
