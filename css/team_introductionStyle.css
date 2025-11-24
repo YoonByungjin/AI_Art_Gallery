@@ -121,12 +121,12 @@ body {
     font-weight: 700;
 }
 .memberRole {
-    font-size: 0.92rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.88);
 }
 .memberDetail {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
 }
 /* 오른쪽 태그 */
 .tag {
