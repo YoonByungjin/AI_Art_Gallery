@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>how_to_view4</title>
     <link rel="stylesheet" href="../css/how_to_view.css">
+    <script src="../js/i18n.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const button = document.getElementById('nextPageButton');
-            button.addEventListener('click', function (event) {
-                // 페이지 이동 로직
+            button.addEventListener('click', function () {
                 window.location.href = 'how_to_view5.html';
             });
         });
@@ -18,32 +18,29 @@
 </head>
 
 <body>
+    <div class="container">
 
-    <body>
-        <div class="container">
+        <a href="#" class="next-btn" id="nextPageButton">
+            <img src="../image/arrow.png" alt="다음 페이지" class="arrow-icon">
+        </a>
 
-            <a href="#" class="next-btn" id="nextPageButton">
-                <img src="../image/arrow.png" alt="다음 페이지" class="arrow-icon">
-            </a>
+        <div class="content-wrapper">
 
-            <div class="content-wrapper">
+            <h1 class="title" data-i18n="htv.title">전시 관람 방법</h1>
 
-                <h1 class="title">전시 관람 방법</h1>
-
-                <div class="rule">
-                    마지막에 모든 제목과 작품 설명이 공개됩니다.
-                </div>
-
-                <div class="description">
-                    <p>지금부터는 당신의 호흡과 속도에 맞춰 작품을 마주해주세요.</p>
-                    <p>공개되는 설명은 작가가 담은 여러 관점 중 하나일 뿐, 정답이 되지는 않습니다.</p>
-                    <p>이 전시는 관람자의 해석이 가장 중요한 자리이며,</p>
-                    <p>당신이 느낀 감정과 떠올린 생각이 바로 이 작품들의 또 다른 답입니다.</p>
-                </div>
-
+            <div class="rule" data-i18n="htv4.rule">
+                마지막에 모든 제목과 작품 설명이 공개됩니다.
             </div>
+
+            <div class="description">
+                <p data-i18n="htv4.desc1">지금부터는 당신의 호흡과 속도에 맞춰 작품을 마주해주세요.</p>
+                <p data-i18n="htv4.desc2">공개되는 설명은 작가가 담은 여러 관점 중 하나일 뿐, 정답이 되지는 않습니다.</p>
+                <p data-i18n="htv4.desc3">이 전시는 관람자의 해석이 가장 중요한 자리이며,</p>
+                <p data-i18n="htv4.desc4">당신이 느낀 감정과 떠올린 생각이 바로 이 작품들의 또 다른 답입니다.</p>
+            </div>
+
         </div>
-    </body>
+    </div>
 </body>
 
 </html>

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>how_to_view2</title>
     <link rel="stylesheet" href="../css/how_to_view.css">
+    <script src="../js/i18n.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const button = document.getElementById('nextPageButton');
-            button.addEventListener('click', function (event) {
-                // 페이지 이동 로직
+            button.addEventListener('click', function () {
                 window.location.href = 'how_to_view3.html';
             });
         });
@@ -18,30 +18,27 @@
 </head>
 
 <body>
+    <div class="container">
 
-    <body>
-        <div class="container">
+        <a href="#" class="next-btn" id="nextPageButton">
+            <img src="../image/arrow.png" alt="다음 페이지" class="arrow-icon">
+        </a>
 
-            <a href="#" class="next-btn" id="nextPageButton">
-                <img src="../image/arrow.png" alt="다음 페이지" class="arrow-icon">
-            </a>
+        <div class="content-wrapper">
 
-            <div class="content-wrapper">
+            <h1 class="title" data-i18n="htv.title">전시 관람 방법</h1>
 
-                <h1 class="title">전시 관람 방법</h1>
-
-                <div class="rule">
-                    전시는 한 방향으로만 진행됩니다.
-                </div>
-
-                <div class="description">
-                    <p>한 번 지나간 장면은 되돌아갈 수 없습니다.</p>
-                    <p>이 흐름은 되돌릴 수 없는 시간, 선택, 그리고 기술과 함께 변화하는 우리의 삶을 상징합니다.</p>
-                </div>
-
+            <div class="rule" data-i18n="htv2.rule">
+                전시는 한 방향으로만 진행됩니다.
             </div>
+
+            <div class="description">
+                <p data-i18n="htv2.desc1">한 번 지나간 장면은 되돌아갈 수 없습니다.</p>
+                <p data-i18n="htv2.desc2">이 흐름은 되돌릴 수 없는 시간, 선택, 그리고 기술과 함께 변화하는 우리의 삶을 상징합니다.</p>
+            </div>
+
         </div>
-    </body>
+    </div>
 </body>
 
 </html>

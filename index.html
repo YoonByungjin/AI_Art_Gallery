@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>홈화면</title>
+        <title>Digital Art Gallery</title>
         <link rel="stylesheet" href="css/indexStyle.css" />
     </head>
 
@@ -13,12 +13,16 @@
                 Digital<br />
                 Art Gallery
             </h1>
-            <button class="btn" onclick="visitGallery()">Visit Gallery</button>
+            <p class="lang-prompt">언어를 선택해주세요 / 言語を選んでください</p>
+            <div class="lang-btns">
+                <button class="btn lang-btn" onclick="selectLang('ko')">한국어</button>
+                <button class="btn lang-btn" onclick="selectLang('ja')">日本語</button>
+            </div>
         </section>
 
         <script>
-            // 아직 이동할 페이지가 없으니 임시 동작
-            function visitGallery() {
+            function selectLang(lang) {
+                localStorage.setItem('gallery_lang', lang);
                 location.href = './pages/how_to_view.html';
             }
         </script>

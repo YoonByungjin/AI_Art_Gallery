@@ -38,16 +38,25 @@ body {
     margin-bottom: 5rem;
     font-weight: 700;
 }
+.lang-prompt {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.08em;
+    margin-bottom: 1.4rem;
+}
+.lang-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 .btn {
     display: block;
-    margin-left: auto;
-    margin-right: 0;
     padding: 1rem 3rem;
     border-radius: 999px;
     border: none;
     background: #fff;
     color: #111;
-    font-size: 30px;
+    font-size: 24px;
     cursor: pointer;
     transition: 0.2s;
     font-weight: 400;

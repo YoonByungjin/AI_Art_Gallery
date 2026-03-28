@@ -4,22 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>how_to_view</title>
+    <title>events</title>
     <link rel="stylesheet" href="../css/events.css">
-
-    <head>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const button = document.getElementById('nextPageButton');
-                button.addEventListener('click', function (event) {
-                    // 페이지 이동 로직
-                    window.location.href = 'creation_process.html';
-                });
+    <script src="../js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const button = document.getElementById('nextPageButton');
+            button.addEventListener('click', function () {
+                window.location.href = 'creation_process.html';
             });
-        </script>
-
-    </head>
+        });
+    </script>
+</head>
 
 <body>
     <div class="container">
@@ -37,25 +33,19 @@
             <div class="right-text-area">
 
                 <div class="title-group">
-                    <h1 class="main-title event-title">후기 작성</h1>
+                    <h1 class="main-title event-title" data-i18n="ev.title">후기 작성</h1>
                     <div class="event-type">EVENT</div>
                 </div>
 
                 <div class="event-description">
-                    <p>눈부신 작품 세계를 탐험하신 모든 분들께, <br>Digital art gallery에서 선사하는 또 다른 아름다운 선물.<br> SNS 이벤트에 참여하고 아메리카노 한잔
-                        받아가세요.
-                    </p>
+                    <p data-i18n="ev.desc">눈부신 작품 세계를 탐험하신 모든 분들께, Digital Art Gallery에서 선사하는 또 다른 아름다운 선물. SNS 이벤트에 참여하고 아메리카노 한잔 받아가세요.</p>
                 </div>
 
                 <div class="social-links">
-                    <a href="https://x.com/?lang=ko" target='_blank'><img src="../image/image1.png" alt="X"
-                            class="social-icon"></a>
-                    <a href="https://www.instagram.com/" target='_blank'><img src="../image/image3.png" alt="Instagram"
-                            class="social-icon"></a>
-                    <a href="https://www.tiktok.com/ko-KR/" target='_blank'><img src="../image/image10.png" alt="TikTok"
-                            class="social-icon"></a>
-                    <a href="https://www.facebook.com/?locale=ko_KR " target='_blank'><img
-                            src="../image/images-Photoroom.png" alt="Facebook" class="social-icon"></a>
+                    <a href="https://x.com/?lang=ko" target='_blank'><img src="../image/image1.png" alt="X" class="social-icon"></a>
+                    <a href="https://www.instagram.com/" target='_blank'><img src="../image/image3.png" alt="Instagram" class="social-icon"></a>
+                    <a href="https://www.tiktok.com/ko-KR/" target='_blank'><img src="../image/image10.png" alt="TikTok" class="social-icon"></a>
+                    <a href="https://www.facebook.com/?locale=ko_KR" target='_blank'><img src="../image/images-Photoroom.png" alt="Facebook" class="social-icon"></a>
                 </div>
 
             </div>

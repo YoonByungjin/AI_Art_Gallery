@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>방명록</title>
+    <script src="../js/i18n.js"></script>
     <style>
         body {
             background: #0d1117;
@@ -20,7 +21,6 @@
             padding: 40px;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 10px;
-            font-family: Arial, sans-serif;
         }
 
         input,
@@ -33,7 +33,7 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 6px;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: inherit;
         }
 
         textarea {
@@ -51,7 +51,7 @@
             font-size: 16px;
             cursor: pointer;
             font-weight: bold;
-            font-family: Arial, sans-serif;
+            font-family: inherit;
         }
 
         .btn:hover {
@@ -62,7 +62,6 @@
             text-align: left;
             padding: 12px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            font-family: Arial, sans-serif;
         }
 
         .guest-name {
@@ -92,37 +91,25 @@
 
 <body>
 
-    <h1>방명록</h1>
-    <p>전시를 관람하신 소감을 남겨주세요. 여러분의 생각이 궁금합니다.</p>
+    <h1 data-i18n="gb.title">방명록</h1>
+    <p data-i18n="gb.subtitle">전시를 관람하신 소감을 남겨주세요. 여러분의 생각이 궁금합니다.</p>
 
     <div class="container">
-        <h3>이름</h3>
-        <input type="text" placeholder="이름을 입력하세요">
+        <h3 data-i18n="gb.label.name">이름</h3>
+        <input type="text" id="name1"
+            data-i18n-placeholder="gb.placeholder.name"
+            placeholder="이름을 입력하세요">
 
-        <h3>메시지</h3>
-        <textarea placeholder="전시에 대한 소감을 남겨주세요"></textarea>
+        <h3 data-i18n="gb.label.msg">메시지</h3>
+        <textarea id="comment1"
+            data-i18n-placeholder="gb.placeholder.msg"
+            placeholder="전시에 대한 소감을 남겨주세요"></textarea>
 
-        <button class="btn">방명록 작성</button>
+        <button class="btn" data-i18n="gb.btn">방명록 작성</button>
     </div>
 
-    <!--  기존 작성자 목록 -->
     <div class="container" style="margin-top:40px;">
-        <h2>이전에 남겨진 방명록</h2>
-
-        <div class="guest-item">
-            <div class="guest-name">홍길동</div>
-            <div class="guest-message">전시가 너무 인상 깊었습니다.</div>
-        </div>
-
-        <div class="guest-item">
-            <div class="guest-name">김영희</div>
-            <div class="guest-message">작품들의 분위기가 너무 좋았어요.</div>
-        </div>
-
-        <div class="guest-item">
-            <div class="guest-name">Yuki</div>
-            <div class="guest-message">静かで美しい展示でした。特に最後の作品が印象的でした。</div>
-        </div>
+        <h2 data-i18n="gb.list.title">이전에 남겨진 방명록</h2>
     </div>
 
     <!-- ▼ 다음 페이지로 이동하는 화살표 버튼 -->
@@ -133,11 +120,65 @@
     </div>
 
     <script>
+        const DEFAULT_ENTRIES = {
+            ko: [
+                { name: "홍길동", message: "전시가 너무 인상 깊었습니다." },
+                { name: "김영희", message: "작품들의 분위기가 너무 좋았어요." },
+                { name: "Yuki", message: "静かで美しい展示でした。特に最後の作品が印象的でした。" }
+            ],
+            ja: [
+                { name: "田中 さくら", message: "静かで美しい展示でした。特に最後の作品が印象的でした。" },
+                { name: "鈴木 一郎", message: "AIと人間の関係を芸術で表現するという発想が素晴らしかったです。" },
+                { name: "홍길동", message: "전시가 너무 인상 깊었습니다." }
+            ]
+        };
+
         window.onload = function () {
+            const lang = localStorage.getItem(LANG_KEY) || 'ko';
+            const STORAGE_KEY = 'guestbook_entries_' + lang;
+            const container = document.querySelector(".container:nth-of-type(2)");
+
+            function loadEntries() {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                return saved ? JSON.parse(saved) : DEFAULT_ENTRIES[lang];
+            }
+
+            function saveEntries(entries) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+            }
+
+            function renderEntry(entry) {
+                const div = document.createElement("div");
+                div.classList.add("guest-item");
+                div.innerHTML = `
+                    <div class="guest-name">${entry.name}</div>
+                    <div class="guest-message">${entry.message}</div>
+                `;
+                container.appendChild(div);
+            }
+
+            loadEntries().forEach(renderEntry);
+
             document.querySelector(".btn").addEventListener("click", () => {
-                alert("아직 안됐지롱~낄낄낄");
+                const name1 = document.getElementById("name1").value.trim();
+                const comment1 = document.getElementById("comment1").value.trim();
+
+                if (!name1 || !comment1) {
+                    alert(translations[lang]['gb.alert']);
+                    return;
+                }
+
+                const newEntry = { name: name1, message: comment1 };
+                renderEntry(newEntry);
+
+                const entries = loadEntries();
+                entries.push(newEntry);
+                saveEntries(entries);
+
+                document.getElementById("name1").value = "";
+                document.getElementById("comment1").value = "";
             });
-        }
+        };
     </script>
 
 </body>

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>how_to_view</title>
     <link rel="stylesheet" href="../css/how_to_view.css">
+    <script src="../js/i18n.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const button = document.getElementById('nextPageButton');
-            button.addEventListener('click', function (event) {
-                // 페이지 이동 로직
+            button.addEventListener('click', function () {
                 window.location.href = 'how_to_view2.html';
             });
         });
@@ -18,32 +18,29 @@
 </head>
 
 <body>
+    <div class="container">
 
-    <body>
-        <div class="container">
+        <a href="#" class="next-btn" id="nextPageButton">
+            <img src="../image/arrow.png" alt="다음 페이지" class="arrow-icon">
+        </a>
 
-            <a href="#" class="next-btn" id="nextPageButton">
-                <img src="../image/arrow.png" alt="다음 페이지" class="arrow-icon">
-            </a>
+        <div class="content-wrapper">
 
-            <div class="content-wrapper">
+            <h1 class="title" data-i18n="htv.title">전시 관람 방법</h1>
 
-                <h1 class="title">전시 관람 방법</h1>
-
-                <div class="rule">
-                    작품 제목은 바로 공개되지 않습니다.
-                </div>
-
-                <div class="description">
-                    <p>작품 제목은 바로 공개되지 않습니다.</p>
-                    <p>전시가 시작되면 약 1분 동안 다음 페이지로 이동이 제한되며,
-                        한 장의 이미지만 천천히 감상하게 됩니다.
-                        이 시간은 작품을 ‘정답 없이’ 순수하게 바라보기 위한 준비 구간입니다.</p>
-                </div>
-
+            <div class="rule" data-i18n="htv1.rule">
+                작품 제목은 바로 공개되지 않습니다.
             </div>
+
+            <div class="description">
+                <p data-i18n="htv1.desc1">작품 제목은 바로 공개되지 않습니다.</p>
+                <p data-i18n="htv1.desc2">전시가 시작되면 약 1분 동안 다음 페이지로 이동이 제한되며,
+                    한 장의 이미지만 천천히 감상하게 됩니다.
+                    이 시간은 작품을 '정답 없이' 순수하게 바라보기 위한 준비 구간입니다.</p>
+            </div>
+
         </div>
-    </body>
+    </div>
 </body>
 
 </html>
