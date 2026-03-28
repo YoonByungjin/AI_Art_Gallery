@@ -4,7 +4,7 @@ const nextBtn = document.getElementById('nextBtn');
 
 setTimeout(() => {
     nextBtn.classList.add('active');
-}, 10000);
+}, 60000);
 
 
 nextBtn.addEventListener('click', () => {
