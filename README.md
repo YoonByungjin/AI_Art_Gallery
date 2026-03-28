@@ -109,11 +109,11 @@ AIが一人称で語る文体で、人工知能の視点から展覧会を紹介
 
 | 言語選択画面 | ギャラリー画面 |
 |:-----------:|:-------------:|
-| ![言語選択](docs/images/index.png) | ![ギャラリー](docs/images/gallery.png) |
+| ![言語選択](docs/images/art_home.png) | ![ギャラリー](docs/images/gallery.png) |
 
 | 作品解説画面（タイプライター） | 制作過程画面（バブルアニメーション） |
 |:-----------------------------:|:-----------------------------------:|
-| ![作品解説](docs/images/art_themes.png) | ![制作過程](docs/images/creation_process.png) |
+| ![作品解説](docs/images/gallery.png) | ![制作過程](docs/images/typewriter.png) |
 
 ---
 
@@ -208,11 +208,11 @@ AI가 1인칭으로 말하는 문체로, 인공지능 시점에서 전시를 소
 
 | 언어 선택 화면 | 갤러리 화면 |
 |:-------------:|:-----------:|
-| ![언어선택](docs/images/index.png) | ![갤러리](docs/images/gallery.png) |
+| ![언어선택](docs/images/art_home.png) | ![갤러리](docs/images/gallery.png) |
 
 | 작품 해설 화면 (타이프라이터) | 생성 과정 화면 (버블 애니메이션) |
 |:---------------------------:|:-------------------------------:|
-| ![작품해설](docs/images/art_themes.png) | ![생성과정](docs/images/creation_process.png) |
+| ![작품해설](docs/images/typewriter.png) | ![생성과정](docs/images/created.png) |
 
 ---
 
