@@ -9,7 +9,6 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 
-**🏆 課題成績 1位（98点/100点）| 과제 성적 1위（98점/100점）**
 
 [🇯🇵 日本語 (Japanese)](#jp-japanese-version) | [🇰🇷 한국어 (Korean)](#kr-korean-version)
 
