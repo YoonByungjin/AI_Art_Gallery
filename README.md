@@ -26,6 +26,7 @@ AIが制作から解説まで語り手となる、一方通行の体験型デジ
 HTML / CSS / JavaScript（Vanilla）のみで実装した、バックエンドなしの完全フロントエンド作品です。
 
 > 開発期間：2025年11月（約2週間）｜チーム：5名
+ 🌐 **[Live Demo](https://https://yoonbyungjin.github.io/AI_Art_Gallery/)**
 
 ---
 
@@ -125,6 +126,7 @@ AI가 기획부터 해설까지 직접 이야기하는 일방향 체험형 디�
 HTML / CSS / JavaScript(Vanilla)만으로 구현한 백엔드 없는 순수 프론트엔드 작품입니다.
 
 > 개발 기간: 2025년 11월 (약 2주) | 팀 구성: 5명
+🌐 **[Live Demo](https://https://yoonbyungjin.github.io/AI_Art_Gallery/)**
 
 ---
 
